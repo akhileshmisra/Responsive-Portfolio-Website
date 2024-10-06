@@ -6,7 +6,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
         // Smooth scroll with easing effect
         window.scrollTo({
-            top: targetElement.offsetTop,
+            top: targetElement.offsetTop - 50, // Adjust to prevent header overlap
             behavior: 'smooth'
         });
     });
@@ -29,6 +29,11 @@ const revealOnScroll = () => {
         }
     });
 };
+
+window.addEventListener('scroll', revealOnScroll);
+
+// Trigger the scroll function on page load
+revealOnScroll();
 
 window.addEventListener('scroll', revealOnScroll);
 
