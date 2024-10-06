@@ -1,0 +1,180 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set font family and background color */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f4; /* Light text for dark background */
+    background-color: #1a1a1a; /* Dark background */
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, #0d47a1, #1c1c1c); /* Dark blue to dark gray gradient */
+    color: white;
+    padding: 40px 0;
+    text-align: left; /* Align text to the left */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between text and photo */
+    align-items: center; /* Center vertically */
+    max-width: 1200px; /* Optional: Set a max width for the container */
+    margin: 0 auto; /* Center container horizontally */
+}
+
+.header-text {
+    max-width: 60%; /* Limit text width */
+}
+
+.header-photo {
+    width: 300px; /* Increased photo size */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px; /* Make the corners slightly rounded */
+    margin-left: 20px; /* Space between text and photo */
+    border: 2px solid #ffb74d; /* Gold border */
+}
+
+header h1 {
+    font-size: 4rem; /* Increased font size */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    letter-spacing: 2px; /* Increased letter spacing */
+    background: linear-gradient(135deg, #ffb74d, #ffffff); /* Gradient color for the name */
+    -webkit-background-clip: text; /* For gradient text */
+    -webkit-text-fill-color: transparent; /* For gradient text */
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f4f4f4; /* Light navigation links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #ffb74d; /* Gold on hover */
+}
+
+/* Section styling */
+section {
+    padding: 50px 0;
+    background-color: #2c2c2c; /* Darker section background */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffb74d; /* Gold heading color */
+    border-bottom: 3px solid #1e88e5;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Hover effect on project links */
+#projects ul li a {
+    text-decoration: none;
+    color: #64b5f6; /* Light blue project links */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#projects ul li a:hover {
+    color: #ffb74d; /* Gold on hover */
+}
+
+/* Footer styling */
+footer {
+    padding: 20px 0;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    text-align: center;
+}
+
+footer a {
+    color: #ffb74d; /* Gold links in footer */
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #64b5f6; /* Light blue on hover */
+}
+
+/* Reveal effect styling */
+.reveal {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly down */
+    transition: all 0.6s ease-out; /* Smooth transition */
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Adjust the font size for smaller screens */
+        letter-spacing: 1px; /* Reduce letter spacing */
+    }
+
+    .header-container {
+        flex-direction: column; /* Stack the text and photo vertically */
+        text-align: center; /* Center align text */
+    }
+
+    .header-text {
+        max-width: 100%; /* Allow text to take full width */
+        margin-bottom: 20px; /* Add spacing between text and photo */
+    }
+
+    .header-photo {
+        width: 150px; /* Reduce photo size */
+        margin: 0 auto; /* Center the photo */
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        display: block; /* Stack the nav items vertically */
+        margin: 10px 0; /* Add margin between items */
+    }
+}
